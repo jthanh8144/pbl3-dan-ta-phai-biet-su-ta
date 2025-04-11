@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B89540D4-6EE9-43C0-BB6E-112F8E618B78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PBL3_DanTaPhaiBietSuTa</RootNamespace>
+    <AssemblyName>PBL3_DanTaPhaiBietSuTa</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BLL.cs" />
+    <Compile Include="CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomButton.Designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="DAL\InterfaceDAL.cs" />
+    <Compile Include="DTO\CreateDB.cs" />
+    <Compile Include="DTO\DB.cs" />
+    <Compile Include="DTO\GameProcess.cs" />
+    <Compile Include="DTO\Point.cs" />
+    <Compile Include="DTO\Question.cs" />
+    <Compile Include="DTO\Stage.cs" />
+    <Compile Include="DTO\Standing.cs" />
+    <Compile Include="DTO\UserInfo.cs" />
+    <Compile Include="DTO\Video.cs" />
+    <Compile Include="GenData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenData.Designer.cs">
+      <DependentUpon>GenData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031323409_InitialCreate.cs" />
+    <Compile Include="Migrations\202105031323409_InitialCreate.Designer.cs">
+      <DependentUpon>202105031323409_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031339261_long123.cs" />
+    <Compile Include="Migrations\202105031339261_long123.Designer.cs">
+      <DependentUpon>202105031339261_long123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031341038_longlong.cs" />
+    <Compile Include="Migrations\202105031341038_longlong.Designer.cs">
+      <DependentUpon>202105031341038_longlong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031342474_longlonglong.cs" />
+    <Compile Include="Migrations\202105031342474_longlonglong.Designer.cs">
+      <DependentUpon>202105031342474_longlonglong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031344452_21121.cs" />
+    <Compile Include="Migrations\202105031344452_21121.Designer.cs">
+      <DependentUpon>202105031344452_21121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031351127_long1231.cs" />
+    <Compile Include="Migrations\202105031351127_long1231.Designer.cs">
+      <DependentUpon>202105031351127_long1231.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031358525_0213.cs" />
+    <Compile Include="Migrations\202105031358525_0213.Designer.cs">
+      <DependentUpon>202105031358525_0213.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031411295_db1.cs" />
+    <Compile Include="Migrations\202105031411295_db1.Designer.cs">
+      <DependentUpon>202105031411295_db1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031440521_21123.cs" />
+    <Compile Include="Migrations\202105031440521_21123.Designer.cs">
+      <DependentUpon>202105031440521_21123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031443434_231.cs" />
+    <Compile Include="Migrations\202105031443434_231.Designer.cs">
+      <DependentUpon>202105031443434_231.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031446044_2312.cs" />
+    <Compile Include="Migrations\202105031446044_2312.Designer.cs">
+      <DependentUpon>202105031446044_2312.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031447322_23121.cs" />
+    <Compile Include="Migrations\202105031447322_23121.Designer.cs">
+      <DependentUpon>202105031447322_23121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031503172_1211.cs" />
+    <Compile Include="Migrations\202105031503172_1211.Designer.cs">
+      <DependentUpon>202105031503172_1211.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031505516_12111.cs" />
+    <Compile Include="Migrations\202105031505516_12111.Designer.cs">
+      <DependentUpon>202105031505516_12111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031515586_1211111.cs" />
+    <Compile Include="Migrations\202105031515586_1211111.Designer.cs">
+      <DependentUpon>202105031515586_1211111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031517099_12111111.cs" />
+    <Compile Include="Migrations\202105031517099_12111111.Designer.cs">
+      <DependentUpon>202105031517099_12111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031545392_121111111.cs" />
+    <Compile Include="Migrations\202105031545392_121111111.Designer.cs">
+      <DependentUpon>202105031545392_121111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031630109_1211111111.cs" />
+    <Compile Include="Migrations\202105031630109_1211111111.Designer.cs">
+      <DependentUpon>202105031630109_1211111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031636135_12111111111.cs" />
+    <Compile Include="Migrations\202105031636135_12111111111.Designer.cs">
+      <DependentUpon>202105031636135_12111111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105071426386_long.cs" />
+    <Compile Include="Migrations\202105071426386_long.Designer.cs">
+      <DependentUpon>202105071426386_long.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105121518017_longlong1.cs" />
+    <Compile Include="Migrations\202105121518017_longlong1.Designer.cs">
+      <DependentUpon>202105121518017_longlong1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106011339249_AddIsAdmin.cs" />
+    <Compile Include="Migrations\202106011339249_AddIsAdmin.Designer.cs">
+      <DependentUpon>202106011339249_AddIsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OvalPictureBox.Designer.cs">
+      <DependentUpon>OvalPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Play.Designer.cs">
+      <DependentUpon>Play.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReplayNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReplayNotification.Designer.cs">
+      <DependentUpon>ReplayNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomButton.resx">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenData.resx">
+      <DependentUpon>GenData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031323409_InitialCreate.resx">
+      <DependentUpon>202105031323409_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031339261_long123.resx">
+      <DependentUpon>202105031339261_long123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031341038_longlong.resx">
+      <DependentUpon>202105031341038_longlong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031342474_longlonglong.resx">
+      <DependentUpon>202105031342474_longlonglong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031344452_21121.resx">
+      <DependentUpon>202105031344452_21121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031351127_long1231.resx">
+      <DependentUpon>202105031351127_long1231.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031358525_0213.resx">
+      <DependentUpon>202105031358525_0213.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031411295_db1.resx">
+      <DependentUpon>202105031411295_db1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031440521_21123.resx">
+      <DependentUpon>202105031440521_21123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031443434_231.resx">
+      <DependentUpon>202105031443434_231.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031446044_2312.resx">
+      <DependentUpon>202105031446044_2312.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031447322_23121.resx">
+      <DependentUpon>202105031447322_23121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031503172_1211.resx">
+      <DependentUpon>202105031503172_1211.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031505516_12111.resx">
+      <DependentUpon>202105031505516_12111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031515586_1211111.resx">
+      <DependentUpon>202105031515586_1211111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031517099_12111111.resx">
+      <DependentUpon>202105031517099_12111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031545392_121111111.resx">
+      <DependentUpon>202105031545392_121111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031630109_1211111111.resx">
+      <DependentUpon>202105031630109_1211111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031636135_12111111111.resx">
+      <DependentUpon>202105031636135_12111111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071426386_long.resx">
+      <DependentUpon>202105071426386_long.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105121518017_longlong1.resx">
+      <DependentUpon>202105121518017_longlong1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106011339249_AddIsAdmin.resx">
+      <DependentUpon>202106011339249_AddIsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Play.resx">
+      <DependentUpon>Play.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReplayNotification.resx">
+      <DependentUpon>ReplayNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="UI\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
